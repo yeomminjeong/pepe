@@ -1,0 +1,112 @@
+.pepe {
+  position: absolute;
+  width: calc(100% - 48px);
+  top: 26rem;
+  left: 1.44rem;
+  font-size: var(--title2-size);
+  line-height: 2.25rem;
+  display: inline-block;
+  text-shadow: 0 0 0 rgba(255, 255, 255, 0.01);
+}
+.petParents,
+.text {
+  position: absolute;
+  line-height: 1rem;
+}
+.petParents {
+  width: calc(100% - 67px);
+  top: 5.38rem;
+  left: 2.25rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  color: #afbccb;
+  display: inline-block;
+}
+.text {
+  top: calc(50% - 8px);
+  left: calc(50% - 28.5px);
+  font-weight: 500;
+  text-shadow: 0 0 0 rgba(255, 255, 255, 0.01);
+}
+.controlsButtons {
+  position: absolute;
+  width: calc(100% - 48px);
+  right: 1.5rem;
+  bottom: 2.38rem;
+  left: 1.5rem;
+  border-radius: 48px;
+  background-color: var(--sky-white);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.01);
+  height: 3rem;
+}
+.pepe_logo {
+  position: absolute;
+  top: 18.5rem;
+  left: 5.75rem;
+  width: 11.94rem;
+  height: 5.94rem;
+  object-fit: cover;
+}
+.nativeHomeIndicator {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 2.13rem;
+}
+.div {
+  position: absolute;
+  top: calc(50% - 6px);
+  left: 1.88rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-shadow: 0 0 0 rgba(255, 255, 255, 0.01);
+}
+.mobileSignalIcon {
+  position: absolute;
+  top: calc(50% - 1.5px);
+  right: 4.31rem;
+  width: 1.13rem;
+  height: 0.63rem;
+}
+.batteryIcon,
+.wifiIcon {
+  position: absolute;
+  top: calc(50% - 3px);
+  right: 3.05rem;
+  width: 0.95rem;
+  height: 0.69rem;
+}
+.batteryIcon {
+  top: calc(50% - 4px);
+  right: 1rem;
+  width: 1.69rem;
+  height: 0.81rem;
+}
+.launchScreen,
+.nativeStatusBar {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.01);
+  width: 100%;
+}
+.nativeStatusBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2.75rem;
+  text-align: left;
+}
+.launchScreen {
+  position: relative;
+  border-radius: 32px;
+  background-color: var(--sky-white);
+  height: 50.75rem;
+  text-align: center;
+  font-size: var(--regular-none-medium-size);
+  color: var(--ink-darkest);
+  font-family: var(--title2);
+}
