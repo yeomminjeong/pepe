@@ -13,12 +13,13 @@ function App() {
   return (
     <div>
       <LaunchScreen />
-      {/* <AnalysisContent />
+      <AnalysisContent />
       <Analysising />
       <ResultPage />
+
+      <LoginEmail></LoginEmail>
+      <AnalysisPage></AnalysisPage>
       <Join></Join>
-      <LoginEmail></LoginEmail> */}
-      {/* <AnalysisPage></AnalysisPage> */}
     </div>
   );
 }
