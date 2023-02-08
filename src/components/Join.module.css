@@ -1,0 +1,254 @@
+.text,
+.textLabel {
+  align-self: stretch;
+  position: relative;
+  line-height: 12px;
+  display: none;
+  height: 12px;
+  flex-shrink: 0;
+}
+.text {
+  font-size: var(--regular-none-regular-size);
+  line-height: 16px;
+  color: var(--ink-darkest);
+  height: 16px;
+}
+.partialsTextFieldFloatin {
+  position: absolute;
+  top: calc(50% - 16.5px);
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-md);
+}
+.controlsTextFieldFloatin {
+  position: absolute;
+  width: calc(100% - 156px);
+  top: 218px;
+  right: 23px;
+  left: 133px;
+  border-radius: var(--br-sm);
+  background-color: var(--sky-white);
+  border: 1px solid var(--sky-light);
+  box-sizing: border-box;
+  height: 45px;
+  font-size: var(--tiny-normal-regular-size);
+}
+.text1 {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 8px);
+  left: 0;
+  line-height: 16px;
+  display: inline-block;
+  height: 16px;
+}
+.partialsTextFieldFloatin1 {
+  position: absolute;
+  width: calc(100% - 34px);
+  top: calc(50% - 8.5px);
+  right: 18px;
+  left: 16px;
+  height: 16px;
+}
+.controlsTextFieldFloatin1 {
+  position: absolute;
+  width: calc(100% - 156px);
+  top: 164px;
+  right: 23px;
+  left: 133px;
+  border-radius: var(--br-sm);
+  background-color: var(--sky-white);
+  border: 1px solid var(--sky-light);
+  box-sizing: border-box;
+  height: 45px;
+}
+.text2 {
+  position: absolute;
+  width: calc(100% - 190px);
+  top: calc(50% - 176px);
+  left: 147px;
+  line-height: 16px;
+  display: inline-block;
+  height: 16px;
+}
+.controlsTextFieldFloatin2,
+.controlsTextFieldFloatin3 {
+  position: absolute;
+  width: calc(100% - 156px);
+  top: 110px;
+  right: 26px;
+  left: 130px;
+  border-radius: var(--br-sm);
+  background-color: var(--sky-white);
+  border: 1px solid var(--sky-light);
+  box-sizing: border-box;
+  height: 45px;
+}
+.controlsTextFieldFloatin3 {
+  top: 276px;
+  right: 20px;
+  left: 136px;
+}
+.partialsTextFieldFloatin4,
+.text5 {
+  position: absolute;
+  height: 16px;
+  display: none;
+}
+.text5 {
+  width: 100%;
+  top: calc(50% - 8px);
+  left: 0;
+  line-height: 16px;
+}
+.partialsTextFieldFloatin4 {
+  width: calc(100% - 34px);
+  top: calc(50% - 8.5px);
+  right: 18px;
+  left: 16px;
+}
+.controlsTextFieldFloatin4,
+.controlsTextFieldFloatin5,
+.controlsTextFieldFloatin6 {
+  position: absolute;
+  width: calc(100% - 320px);
+  top: 338px;
+  right: 181px;
+  left: 139px;
+  border-radius: var(--br-sm);
+  background-color: var(--sky-white);
+  border: 1px solid var(--sky-light);
+  box-sizing: border-box;
+  height: 35px;
+}
+.controlsTextFieldFloatin5,
+.controlsTextFieldFloatin6 {
+  right: 116px;
+  left: 204px;
+}
+.controlsTextFieldFloatin6 {
+  top: 339px;
+  right: 51px;
+  left: 269px;
+}
+.rightActionable,
+.title {
+  position: absolute;
+  top: calc(50% - 9px);
+  line-height: 18px;
+}
+.title {
+  left: calc(50% - 32.5px);
+}
+.rightActionable {
+  right: 24px;
+  font-weight: 500;
+  color: var(--primary-base);
+  text-align: right;
+  display: none;
+}
+.leftActionableIcon {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 18px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.barsNavBarsStandard {
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  right: 0;
+  left: 0;
+  background-color: var(--sky-white);
+  height: 48px;
+  text-align: center;
+  font-size: var(--large-normal-bold-size);
+  color: var(--ink-darkest);
+}
+.div,
+.div1,
+.div2,
+.div3,
+.div4 {
+  position: absolute;
+  width: calc(100% - 48px);
+  top: 123px;
+  left: 30px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--ink-darkest);
+  display: inline-block;
+  height: 16px;
+}
+.div1,
+.div2,
+.div3,
+.div4 {
+  top: 184px;
+  left: 27px;
+}
+.div2,
+.div3,
+.div4 {
+  width: calc(100% - 57px);
+  top: 230px;
+  left: 24px;
+  height: 18px;
+}
+.div3,
+.div4 {
+  width: calc(100% - 51px);
+  top: 291px;
+  left: 30px;
+  height: 16px;
+}
+.div4 {
+  top: 348px;
+  left: 33px;
+}
+.joinChild {
+  position: relative;
+  width: 1px;
+  height: 1px;
+}
+.text8 {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 28.5px);
+  font-size: var(--regular-none-regular-size);
+  line-height: 16px;
+  font-weight: 500;
+  font-family: var(--tiny-normal-regular);
+  color: var(--sky-white);
+  text-align: center;
+}
+.controlsButtons {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--ink-darkest);
+  position: absolute;
+  width: calc(100% - 48px);
+  right: 28px;
+  bottom: 43px;
+  left: 20px;
+  border-radius: var(--br-lg);
+  height: 48px;
+}
+.join {
+  position: relative;
+  border-radius: var(--br-md);
+  background-color: var(--sky-white);
+  width: 100%;
+  height: 812px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--regular-none-regular-size);
+  color: var(--ink-lighter);
+  font-family: var(--tiny-normal-regular);
+}
