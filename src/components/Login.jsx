@@ -1,4 +1,4 @@
-import styles from "./LoginEmail.module.css";
+import styles from "./css/LoginEmail.module.css";
 
 const LoginEmail = () => {
   return (
@@ -19,10 +19,10 @@ const LoginEmail = () => {
         type="text"
         placeholder="password"
       />
-      <div className={styles.partialsTextFieldFloatin}>
+      {/* <div className={styles.partialsTextFieldFloatin}>
         <div className={styles.textLabel}>password</div>
         <div className={styles.text2} />
-      </div>
+      </div> */}
       <div className={styles.byContinuingYouContainer}>
         <span className={styles.byContinuingYouContainer1}>
           <span

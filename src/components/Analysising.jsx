@@ -1,4 +1,4 @@
-import styles from "./Analysising.module.css";
+import styles from "./css/Analysising.module.css";
 
 const Analysising = () => {
   const icon = (

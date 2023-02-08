@@ -1,4 +1,4 @@
-import styles from "./Join.module.css";
+import styles from "./css/Join.module.css";
 
 const Join = () => {
   return (

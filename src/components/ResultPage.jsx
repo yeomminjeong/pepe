@@ -1,4 +1,4 @@
-import styles from "./ResultPage.module.css";
+import styles from "./css/ResultPage.module.css";
 
 const ResultPage = () => {
   return (

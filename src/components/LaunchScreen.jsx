@@ -1,4 +1,4 @@
-import styles from "./LaunchScreen.module.css";
+import styles from "./css/LaunchScreen.module.css";
 
 const LaunchScreen = () => {
   return (

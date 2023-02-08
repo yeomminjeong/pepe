@@ -1,14 +1,10 @@
-import styles from "./AnalysisPage.module.css";
+import styles from "./css/AnalysisPage.module.css";
 
 const AnalysisPage = () => {
   return (
     <div className={styles.analysispage}>
       <div className={styles.content}>
-        <img
-          className={styles.illustrationIcon}
-          alt=""
-          src="../illustration@2x.png"
-        />
+        <img className={styles.illustrationIcon} alt="" src="camera.png" />
         <div className={styles.content1}>
           <div className={styles.text}>
             <b className={styles.b}>반려동물 행동을 분석해보세요!</b>

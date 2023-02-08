@@ -1,4 +1,4 @@
-import styles from "./AnalysisContent.module.css";
+import styles from "./css/AnalysisContent.module.css";
 
 const AnalysisContent = () => {
   return (
