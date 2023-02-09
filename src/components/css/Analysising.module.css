@@ -1,11 +1,12 @@
-.illustrationIcon {
+.bufferingIcon {
   position: relative;
   width: 12.25rem;
   height: 13.25rem;
   flex-shrink: 0;
   object-fit: cover;
+  margin-bottom: 2rem;
 }
-.b,
+.text_b,
 .div {
   position: relative;
   line-height: 1.5rem;
@@ -22,7 +23,7 @@
   gap: var(--gap-md);
 }
 .content,
-.content1,
+.info,
 .text {
   display: flex;
   flex-direction: column;
@@ -63,7 +64,6 @@
   width: 1.5rem;
   height: 1.5rem;
   overflow: hidden;
-  display: none;
 }
 .barsNavBarsStandard {
   position: absolute;
@@ -81,13 +81,16 @@
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
+  width: 24px;
+  height: 24px;
+  margin: auto;
 }
 .analysising,
 .barsTabBarIconOnly {
   background-color: var(--color-white);
   width: 100%;
 }
-.barsTabBarIconOnly {
+.TabBar {
   position: absolute;
   right: 0;
   bottom: 2.13rem;
@@ -97,7 +100,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .analysising {
   position: relative;

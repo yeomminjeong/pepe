@@ -1,4 +1,4 @@
-.pEP {
+.title {
   position: absolute;
   width: calc(100% - 48px);
   top: 26rem;
@@ -40,16 +40,19 @@
   height: 3rem;
   font-size: var(--regular-normal-regular-size);
 }
-.pepe_logo {
+/* .logo {
   position: absolute;
   top: 18.5rem;
   left: 5.75rem;
   width: 11.94rem;
   height: 5.94rem;
   object-fit: cover;
-  display: block;
-  /* margin: auto; */
+  display: flex;
+} */
+.pepe_logo {
+  margin-bottom: 7rem;
 }
+
 .launchScreen {
   position: relative;
   border-radius: var(--br-md);
@@ -61,8 +64,7 @@
   font-size: var(--title2-size);
   color: var(--ink-darkest);
   font-family: var(--small-none-regular);
-}
-.logo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
