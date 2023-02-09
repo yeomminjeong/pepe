@@ -1,151 +1,77 @@
-.text {
-  position: absolute;
-  top: calc(50% - 8px);
-  left: calc(50% - 21.5px);
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
-  font-weight: 500;
-  font-family: var(--tiny-normal-regular);
-  color: var(--sky-white);
-  text-align: center;
+.illustrationIcon {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
-.controlsButtons {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: var(--ink-darkest);
-  position: absolute;
-  width: calc(100% - 48px);
-  right: 24px;
-  bottom: 293px;
-  left: 24px;
-  border-radius: var(--br-lg);
-  height: 48px;
+.b,
+.div {
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  width: 230px;
+}
+.div {
+  font-size: var(--small-normal-regular-size);
+  line-height: 20px;
+  width: 194px;
+}
+.text {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 .text1 {
   position: absolute;
   top: calc(50% - 8px);
-  left: calc(50% - 53.5px);
-  font-size: var(--regular-none-regular-size);
+  left: calc(50% - 29px);
   line-height: 16px;
   font-weight: 500;
-  font-family: var(--tiny-normal-regular);
-  color: var(--ink-darkest);
-  text-align: center;
+  color: white;
 }
-.controlsButtons1,
-.controlsTextFieldFloatin,
-.controlsTextFieldFloatin1 {
-  background-color: var(--sky-white);
-  position: absolute;
-  box-sizing: border-box;
-}
-.controlsButtons1 {
-  cursor: pointer;
-  border: 1px solid #000;
-  padding: 0;
-  width: calc(100% - 48px);
-  right: 24px;
-  bottom: 96px;
-  left: 24px;
-  border-radius: var(--br-lg);
-  height: 48px;
-}
-.controlsTextFieldFloatin,
-.controlsTextFieldFloatin1 {
-  border: 1px solid var(--sky-light);
-  width: calc(100% - 46px);
-  right: 23px;
-  left: 23px;
-  border-radius: var(--br-sm);
-  height: 50px;
-}
-.controlsTextFieldFloatin {
-  font-family: var(--tiny-normal-regular);
-  font-size: var(--tiny-normal-regular-size);
-  top: 107px;
-}
-.controlsTextFieldFloatin1 {
-  top: 169px;
-}
-.text2,
-.textLabel {
-  align-self: stretch;
+.controlsButtons {
   position: relative;
-  font-size: var(--tiny-normal-regular-size);
-  line-height: 12px;
-  font-family: var(--tiny-normal-regular);
-  color: var(--ink-lighter);
-  text-align: left;
-  display: inline-block;
-  height: 12px;
+  border-radius: var(--br-lg);
+  background-color: var(--ink-darkest);
+  width: 170px;
+  height: 48px;
   flex-shrink: 0;
-}
-.text2 {
   font-size: var(--regular-none-regular-size);
-  line-height: 16px;
-  color: var(--ink-darkest);
-  display: none;
-  height: 16px;
+  color: var(--color-white);
 }
-.partialsTextFieldFloatin {
-  position: absolute;
-  top: calc(50% - 217px);
-  left: 40px;
+.content,
+.content1 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-md);
+  align-items: center;
+  justify-content: center;
 }
-.byContinuingYou {
-  color: var(--ink-darkest);
+.content1 {
+  gap: 24px;
 }
-.termsOfService {
-  color: var(--primary-base);
-}
-.byContinuingYouContainer1 {
-  line-break: anywhere;
+.content {
+  position: absolute;
+  height: calc(100% - 180px);
   width: 100%;
+  top: 75px;
+  right: 0;
+  bottom: 105px;
+  left: 0;
+  padding: 131px 62px;
+  box-sizing: border-box;
 }
-.byContinuingYouContainer {
-  width: calc(100% - 48px);
-  bottom: 357px;
-  left: 30px;
-  font-size: var(--tiny-normal-regular-size);
-  line-height: 16px;
-  text-align: left;
-  display: flex;
-  align-items: flex-end;
-}
-.byContinuingYouContainer,
-.div,
 .rightActionable,
 .title {
   position: absolute;
-  font-family: var(--tiny-normal-regular);
-}
-.div {
-  width: calc(100% - 48px);
-  top: 234px;
-  left: 33px;
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
-  font-weight: 500;
-  color: var(--ink-darkest);
-  text-align: left;
-  display: inline-block;
-}
-.rightActionable,
-.title {
   top: calc(50% - 9px);
-  font-size: var(--large-normal-bold-size);
   line-height: 18px;
 }
 .title {
-  left: calc(50% - 24.5px);
-  color: var(--ink-darkest);
-  text-align: center;
+  left: calc(50% - 28.5px);
 }
 .rightActionable {
   right: 24px;
@@ -161,6 +87,7 @@
   width: 24px;
   height: 24px;
   overflow: hidden;
+  display: none;
 }
 .barsNavBarsStandard {
   position: absolute;
@@ -168,38 +95,41 @@
   top: 44px;
   right: 0;
   left: 0;
-  background-color: var(--sky-white);
+  background-color: var(--color-white);
   height: 48px;
 }
-.text3 {
-  position: absolute;
-  top: calc(50% - 8px);
-  left: calc(50% - 26.5px);
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
-  font-weight: 500;
-  font-family: var(--tiny-normal-regular);
-  color: var(--sky-white);
-  text-align: center;
+.partialsTabBarIconOnly {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
 }
-.controlsButtons2 {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: var(--ink-darkest);
-  position: absolute;
-  width: calc(100% - 48px);
-  right: 24px;
-  bottom: 151px;
-  left: 24px;
-  border-radius: var(--br-lg);
-  height: 48px;
+.analysispage,
+.barsTabBarIcon {
+  background-color: var(--color-white);
+  width: 100%;
 }
-.loginemail {
+.barsTabBarIcon {
+  position: absolute;
+  right: 0;
+  bottom: 34px;
+  left: 0;
+  box-shadow: 0-1px 1px rgba(20, 20, 20, 0.02), 0-2px 8px rgba(20, 20, 20, 0.04);
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.analysispage {
   position: relative;
   border-radius: var(--br-md);
-  background-color: var(--sky-white);
-  width: 100%;
   height: 812px;
   overflow: hidden;
+  text-align: center;
+  font-size: var(--large-normal-bold-size);
+  color: var(--ink-darkest);
+  font-family: var(--tiny-none-regular);
 }

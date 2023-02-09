@@ -16,9 +16,15 @@ function App() {
       <AnalysisContent />
       <Analysising />
       <ResultPage />
+
+      <LoginEmail></LoginEmail>
+      <AnalysisPage></AnalysisPage>
       <Join></Join>
+<<<<<<< HEAD
       <LoginEmail></LoginEmail>
       {/* <AnalysisPage></AnalysisPage> */}
+=======
+>>>>>>> 97ec6df65b4de79662276c3d30c334537061f667
     </div>
   );
 }
