@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./css/LaunchScreen.module.css";
 
 const LaunchScreen = () => {

@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./css/ResultPage.module.css";
 
 const ResultPage = () => {

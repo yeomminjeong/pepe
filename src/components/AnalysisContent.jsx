@@ -1,3 +1,5 @@
+import React from "react";
+
 import styles from "./css/AnalysisContent.module.css";
 
 const AnalysisContent = () => {
