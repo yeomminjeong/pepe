@@ -1,58 +1,59 @@
 .text {
+  position: absolute;
   width: 100%;
   top: calc(50% - 8px);
   left: 0;
-  line-height: 16px;
+  line-height: 1rem;
   display: inline-block;
-  height: 16px;
-  border: none;
+  height: 1rem;
+  border: 0;
 }
 .partialsTextFieldFloatin {
   position: absolute;
   width: calc(100% - 34px);
   top: calc(50% - 9px);
-  right: 18px;
-  left: 16px;
-  height: 16px;
+  right: 1.13rem;
+  left: 1rem;
+  height: 1rem;
 }
 .controlsDd,
 .controlsMm,
 .controlsYy {
   position: absolute;
-  width: 64px;
-  top: 343px;
-  right: 27px;
-  left: 282px;
-  border-radius: var(--br-sm);
+  width: calc(100% - 309px);
+  top: 21.44rem;
+  right: 1.69rem;
+  left: 17.63rem;
+  border-radius: var(--br-xs);
   background-color: var(--sky-white);
   border: 1px solid var(--sky-light);
   box-sizing: border-box;
-  height: 42px;
+  height: 2.63rem;
 }
 .controlsMm,
 .controlsYy {
-  right: 103px;
-  left: 206px;
+  right: 6.44rem;
+  left: 12.88rem;
 }
 .controlsYy {
-  right: 179px;
-  left: 130px;
+  right: 11.19rem;
+  left: 8.13rem;
 }
 .joinChild {
   position: absolute;
-  top: 95px;
-  left: 153px;
-  width: 100px;
-  height: 100px;
+  top: 5.94rem;
+  left: 9.56rem;
+  width: 6.25rem;
+  height: 6.25rem;
   overflow: hidden;
 }
 .partialsTextFieldFloatin3 {
   position: absolute;
   width: calc(100% - 34px);
   top: calc(50% - 8.5px);
-  right: 18px;
-  left: 16px;
-  height: 16px;
+  right: 1.13rem;
+  left: 1rem;
+  height: 1rem;
 }
 .controlsId,
 .controlsName,
@@ -60,40 +61,40 @@
 .controlsPasswordcheck {
   position: absolute;
   width: calc(100% - 156px);
-  top: 276px;
-  right: 23px;
-  left: 133px;
-  border-radius: var(--br-sm);
+  top: 17.25rem;
+  right: 1.44rem;
+  left: 8.31rem;
+  border-radius: var(--br-xs);
   background-color: var(--sky-white);
   border: 1px solid var(--sky-light);
   box-sizing: border-box;
-  height: 45px;
+  height: 2.81rem;
 }
 .controlsId,
 .controlsPassword,
 .controlsPasswordcheck {
-  top: 222px;
+  top: 13.88rem;
 }
 .controlsId,
 .controlsPassword {
-  top: 164px;
-  right: 26px;
-  left: 130px;
+  top: 10.25rem;
+  right: 1.63rem;
+  left: 8.13rem;
 }
 .controlsId {
-  top: 106px;
+  top: 6.63rem;
 }
 .rightActionable,
 .title {
   position: absolute;
   top: calc(50% - 9px);
-  line-height: 18px;
+  line-height: 1.13rem;
 }
 .title {
   left: calc(50% - 32.5px);
 }
 .rightActionable {
-  right: 24px;
+  right: 1.5rem;
   font-weight: 500;
   color: var(--primary-base);
   text-align: right;
@@ -102,19 +103,19 @@
 .leftActionableIcon {
   position: absolute;
   top: calc(50% - 12px);
-  left: 18px;
-  width: 24px;
-  height: 24px;
+  left: 1.13rem;
+  width: 1.5rem;
+  height: 1.5rem;
   overflow: hidden;
 }
 .barsNavBarsStandard {
   position: absolute;
   width: 100%;
-  top: 44px;
+  top: 2.75rem;
   right: 0;
   left: 0;
   background-color: var(--sky-white);
-  height: 48px;
+  height: 3rem;
   text-align: center;
   font-size: var(--large-normal-bold-size);
   color: var(--ink-darkest);
@@ -122,58 +123,58 @@
 .div,
 .div1 {
   position: absolute;
-  line-height: 16px;
+  line-height: 1rem;
   font-weight: 500;
 }
 .div {
   width: calc(100% - 298px);
-  top: 348px;
-  left: 30px;
+  top: 21.75rem;
+  left: 1.88rem;
   color: var(--ink-darkest);
   display: inline-block;
-  height: 16px;
+  height: 1rem;
 }
 .div1 {
-  top: 296px;
+  top: 18.5rem;
 }
 .div1,
 .div2,
 .div3 {
   width: calc(100% - 298px);
-  left: 30px;
+  left: 1.88rem;
   color: var(--ink-darkest);
   display: inline-block;
-  height: 16px;
+  height: 1rem;
 }
 .div2 {
   position: absolute;
-  top: 228px;
-  line-height: 16px;
+  top: 14.25rem;
+  line-height: 1rem;
   font-weight: 500;
 }
 .div3 {
-  top: 177px;
+  top: 11.06rem;
 }
 .div3,
 .div4,
 .text7 {
   position: absolute;
-  line-height: 16px;
+  line-height: 1rem;
   font-weight: 500;
 }
 .div4 {
   width: calc(100% - 298px);
-  top: 123px;
-  left: 30px;
+  top: 7.69rem;
+  left: 1.88rem;
   color: var(--ink-darkest);
   display: inline-block;
-  height: 16px;
+  height: 1rem;
 }
 .text7 {
   top: calc(50% - 8px);
   left: calc(50% - 28.5px);
-  font-size: var(--regular-none-regular-size);
-  font-family: var(--tiny-none-regular);
+  font-size: var(--regular-normal-regular-size);
+  font-family: var(--small-none-regular);
   color: var(--sky-white);
   text-align: center;
 }
@@ -184,18 +185,18 @@
   background-color: var(--ink-darkest);
   position: absolute;
   width: calc(100% - 48px);
-  right: 28px;
-  bottom: 43px;
-  left: 20px;
+  right: 1.75rem;
+  bottom: 2.69rem;
+  left: 1.25rem;
   border-radius: var(--br-lg);
-  height: 48px;
+  height: 3rem;
 }
 .joinItem {
   position: absolute;
-  top: 84px;
-  left: 208px;
-  width: 100px;
-  height: 100px;
+  top: 5.25rem;
+  left: 13rem;
+  width: 6.25rem;
+  height: 6.25rem;
   overflow: hidden;
 }
 .join {
@@ -203,10 +204,10 @@
   border-radius: var(--br-md);
   background-color: var(--sky-white);
   width: 100%;
-  height: 812px;
+  height: 50.75rem;
   overflow: hidden;
   text-align: left;
-  font-size: var(--regular-none-regular-size);
+  font-size: var(--regular-normal-regular-size);
   color: var(--ink-lighter);
-  font-family: var(--tiny-none-regular);
+  font-family: var(--small-none-regular);
 }

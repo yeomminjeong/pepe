@@ -2,101 +2,91 @@
   position: absolute;
   top: calc(50% - 8px);
   left: calc(50% - 21.5px);
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
+  font-size: var(--regular-normal-regular-size);
+  line-height: 1rem;
   font-weight: 500;
-  font-family: var(--tiny-normal-regular);
+  font-family: var(--small-none-regular);
   color: var(--sky-white);
   text-align: center;
 }
-.controlsButtons {
+.loginBtn {
   cursor: pointer;
   border: 0;
   padding: 0;
   background-color: var(--ink-darkest);
   position: absolute;
   width: calc(100% - 48px);
-  right: 24px;
-  bottom: 293px;
-  left: 24px;
+  right: 1.5rem;
+  bottom: 18.31rem;
+  left: 1.5rem;
   border-radius: var(--br-lg);
-  height: 48px;
+  height: 3rem;
 }
 .text1 {
   position: absolute;
   top: calc(50% - 8px);
   left: calc(50% - 53.5px);
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
+  font-size: var(--regular-normal-regular-size);
+  line-height: 1rem;
   font-weight: 500;
-  font-family: var(--tiny-normal-regular);
+  font-family: var(--small-none-regular);
   color: var(--ink-darkest);
   text-align: center;
 }
-.controlsButtons1,
-.controlsTextFieldFloatin,
-.controlsTextFieldFloatin1 {
+.kakaoBtn,
+.emailText,
+.pwdText {
   background-color: var(--sky-white);
   position: absolute;
   box-sizing: border-box;
 }
-.controlsButtons1 {
+.kakaoBtn {
   cursor: pointer;
-  border: 1px solid #000;
+  border: 1px solid var(--color-black);
   padding: 0;
   width: calc(100% - 48px);
-  right: 24px;
-  bottom: 96px;
-  left: 24px;
+  right: 1.5rem;
+  bottom: 6rem;
+  left: 1.5rem;
   border-radius: var(--br-lg);
-  height: 48px;
+  height: 3rem;
 }
-.controlsTextFieldFloatin,
-.controlsTextFieldFloatin1 {
+.emailText,
+.pwdText {
   border: 1px solid var(--sky-light);
   width: calc(100% - 46px);
-  right: 23px;
-  left: 23px;
-  border-radius: var(--br-sm);
-  height: 50px;
+  right: 1.44rem;
+  left: 1.44rem;
+  border-radius: var(--br-xs);
+  height: 3.13rem;
 }
-.controlsTextFieldFloatin {
-  font-family: var(--tiny-normal-regular);
-  font-size: var(--tiny-normal-regular-size);
-  top: 107px;
+.emailText {
+  font-family: var(--small-none-regular);
+  font-size: var(--tiny-none-regular-size);
+  top: 6.69rem;
 }
-.controlsTextFieldFloatin1 {
-  top: 169px;
+.pwdText {
+  top: 10.56rem;
 }
 .text2,
 .textLabel {
   align-self: stretch;
   position: relative;
-  font-size: var(--tiny-normal-regular-size);
-  line-height: 12px;
-  font-family: var(--tiny-normal-regular);
+  font-size: var(--tiny-none-regular-size);
+  line-height: 0.75rem;
+  font-family: var(--small-none-regular);
   color: var(--ink-lighter);
   text-align: left;
   display: inline-block;
-  height: 12px;
+  height: 0.75rem;
   flex-shrink: 0;
 }
 .text2 {
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
+  font-size: var(--regular-normal-regular-size);
+  line-height: 1rem;
   color: var(--ink-darkest);
   display: none;
-  height: 16px;
-}
-.partialsTextFieldFloatin {
-  position: absolute;
-  top: calc(50% - 217px);
-  left: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-md);
+  height: 1rem;
 }
 .byContinuingYou {
   color: var(--ink-darkest);
@@ -110,10 +100,10 @@
 }
 .byContinuingYouContainer {
   width: calc(100% - 48px);
-  bottom: 357px;
-  left: 30px;
-  font-size: var(--tiny-normal-regular-size);
-  line-height: 16px;
+  bottom: 22.31rem;
+  left: 1.88rem;
+  font-size: var(--tiny-none-regular-size);
+  line-height: 1rem;
   text-align: left;
   display: flex;
   align-items: flex-end;
@@ -123,14 +113,14 @@
 .rightActionable,
 .title {
   position: absolute;
-  font-family: var(--tiny-normal-regular);
+  font-family: var(--small-none-regular);
 }
 .div {
   width: calc(100% - 48px);
-  top: 234px;
-  left: 33px;
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
+  top: 14.63rem;
+  left: 2.06rem;
+  font-size: var(--regular-normal-regular-size);
+  line-height: 1rem;
   font-weight: 500;
   color: var(--ink-darkest);
   text-align: left;
@@ -140,7 +130,7 @@
 .title {
   top: calc(50% - 9px);
   font-size: var(--large-normal-bold-size);
-  line-height: 18px;
+  line-height: 1.13rem;
 }
 .title {
   left: calc(50% - 24.5px);
@@ -148,7 +138,7 @@
   text-align: center;
 }
 .rightActionable {
-  right: 24px;
+  right: 1.5rem;
   font-weight: 500;
   color: var(--primary-base);
   text-align: right;
@@ -157,49 +147,49 @@
 .leftActionableIcon {
   position: absolute;
   top: calc(50% - 12px);
-  left: 18px;
-  width: 24px;
-  height: 24px;
+  left: 1.13rem;
+  width: 1.5rem;
+  height: 1.5rem;
   overflow: hidden;
 }
 .barsNavBarsStandard {
   position: absolute;
   width: 100%;
-  top: 44px;
+  top: 2.75rem;
   right: 0;
   left: 0;
   background-color: var(--sky-white);
-  height: 48px;
+  height: 3rem;
 }
 .text3 {
   position: absolute;
   top: calc(50% - 8px);
   left: calc(50% - 26.5px);
-  font-size: var(--regular-none-regular-size);
-  line-height: 16px;
+  font-size: var(--regular-normal-regular-size);
+  line-height: 1rem;
   font-weight: 500;
-  font-family: var(--tiny-normal-regular);
+  font-family: var(--small-none-regular);
   color: var(--sky-white);
   text-align: center;
 }
-.controlsButtons2 {
+.googleBtn {
   cursor: pointer;
   border: 0;
   padding: 0;
   background-color: var(--ink-darkest);
   position: absolute;
   width: calc(100% - 48px);
-  right: 24px;
-  bottom: 151px;
-  left: 24px;
+  right: 1.5rem;
+  bottom: 9.44rem;
+  left: 1.5rem;
   border-radius: var(--br-lg);
-  height: 48px;
+  height: 3rem;
 }
 .loginemail {
   position: relative;
   border-radius: var(--br-md);
   background-color: var(--sky-white);
   width: 100%;
-  height: 812px;
+  height: 50.75rem;
   overflow: hidden;
 }
