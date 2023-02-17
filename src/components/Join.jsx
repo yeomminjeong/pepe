@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { authEmail } from "../api/auth_email";
 import styles from "./css/Join.module.css";
-
+import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 const Join = () => {
   const [email, setEmail] = useState("");
   const [password, setPwd] = useState("");
   const [config, setConfig] = useState("");
   const [pwdConfig, setPwdConfig] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className={styles.join}>
@@ -17,6 +18,9 @@ const Join = () => {
           className={styles.leftActionableIcon}
           alt=""
           src="https://d1xzdqg8s8ggsr.cloudfront.net/63e220c02b248b7215f5121f/1326c72b-9975-4f33-bcc1-4538d637baa5_1675765328054041386?Expires=-62135596800&Signature=EFTEiiYPJ~87QTtFOV5xjtyvWPwCohjL3xell8ALTf3NouD2AWuryKNHH7qJSsuh7B3dAWKyCh32oRmTIiDydfFERk~Gd6HKikJbVDEYZAom5FKyhaZVXCYNaeRFtfyqmpzMn~8YoSqSXeX8WX30ClYKdgd4p2nVAH2CFH5OW9rzlm-B1LPtrnKAAxupw0AjErk6nqtyW0cn0OL-sgWSqhSF2J27D0P8izFI2A0v~crGBCbSg4Ca9tPDOxm6XRgdgNLUHe76dq80qX3tCikjc-a0pF~00OL2lco2W4F8DFqU0qBU2c6j9-0KmKd4DM3HRSuGeC1hi-5-w9AfnpjZDw__&Key-Pair-Id=K1P54FZWCHCL6J"
+          onClick={() => {
+            navigate(-1);
+          }}
         />
       </div>
       {/* <div className={styles.controlsDd}>
@@ -88,18 +92,20 @@ const Join = () => {
       <div className={styles.div4}>이메일</div>
       <div className={styles.div3}>비밀번호</div>
       <div className={styles.div2}>비밀번호 확인</div>
-      <button
-        className={styles.controlsJoinbuttons}
-        onClick={() => {
-          setPwdConfig(() => {
-            config === password
-              ? authEmail(email, password)
-              : alert("비밀번호 확인을 해주세요.");
-          });
-        }}
-      >
-        <div className={styles.text7}>가입하기</div>
-      </button>
+      <Link to="/Login">
+        <button
+          className={styles.controlsJoinbuttons}
+          onClick={() => {
+            setPwdConfig(() => {
+              config === password
+                ? authEmail(email, password)
+                : alert("비밀번호 확인을 해주세요.");
+            });
+          }}
+        >
+          <div className={styles.text7}>가입하기</div>
+        </button>
+      </Link>
       <div className={styles.joinItem} />
     </div>
   );

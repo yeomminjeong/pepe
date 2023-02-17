@@ -1,7 +1,14 @@
 // import logo from "./logo.svg";
 import React from "react";
 import "./App.css";
-import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  Outlet,
+  useHistory,
+} from "react-router-dom";
 
 import LaunchScreen from "./components/LaunchScreen";
 import AnalysisContent from "./components/AnalysisContent";
