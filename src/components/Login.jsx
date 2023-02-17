@@ -3,6 +3,7 @@ import React from "react";
 import { authEmail } from "../api/auth_email";
 import { googleLogin, login } from "../api/firebase";
 import styles from "./css/LoginEmail.module.css";
+import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 
 const LoginEmail = () => {
   return (
@@ -15,7 +16,9 @@ const LoginEmail = () => {
       />
 
       <button className={styles.loginBtn}>
-        <div className={styles.text}>로그인</div>
+        <Link to="/AnalysisPage">
+          <div className={styles.text}>로그인</div>
+        </Link>
       </button>
       <button className={styles.googleBtn}>
         <div className={styles.text3}>Google</div>
@@ -35,7 +38,9 @@ const LoginEmail = () => {
           <span className={styles.byContinuingYou}>.</span>
         </span>
       </div>
-      <div className={styles.div}>회원가입</div>
+      <Link to="/Join">
+        <div className={styles.div}>회원가입</div>
+      </Link>
       <div className={styles.barsNavBarsStandard}>
         <div className={styles.title}>로그인</div>
         <div className={styles.rightActionable}>Forgot Password</div>

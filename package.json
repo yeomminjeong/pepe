@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.20.0",
     "node-sass": "^8.0.0"
   }
 }
