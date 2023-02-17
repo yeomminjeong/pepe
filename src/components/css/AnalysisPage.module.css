@@ -105,23 +105,26 @@
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
 }
 .analysispage,
-.barsTabBarIcon {
+.barsTabBarIconOnly {
   background-color: var(--color-white);
   width: 100%;
 }
 .barsTabBarIcon {
   position: absolute;
   right: 0;
-  bottom: 34px;
+  bottom: 2.13rem;
   left: 0;
   box-shadow: 0-1px 1px rgba(20, 20, 20, 0.02), 0-2px 8px rgba(20, 20, 20, 0.04);
-  height: 56px;
+  height: 3.5rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .analysispage {
   position: relative;
@@ -131,5 +134,5 @@
   text-align: center;
   font-size: var(--large-normal-bold-size);
   color: var(--ink-darkest);
-  font-family: var(--tiny-none-regular);
+  font-family: var(--small-none-regular);
 }
