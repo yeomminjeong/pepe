@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { authEmail } from "../api/auth_email";
 import styles from "./css/Join.module.css";
 
 const Join = () => {
   const [email, setEmail] = useState("");
   const [password, setPwd] = useState("");
-  const [config, setConfig] = useState("");
+  const [isPassword, setIsPassword] = useState("");
   const [pwdConfig, setPwdConfig] = useState(false);
+
+  const onChangePwdConfirm = useCallback();
 
   return (
     <div className={styles.join}>
@@ -76,9 +78,9 @@ const Join = () => {
             className={styles.text}
             type="password"
             placeholder="비밀번호를 확인해주세요"
-            value={config}
+            value={isPassword}
             onChange={(e) => {
-              setConfig(e.target.value);
+              setIsPassword(e.target.value);
             }}
           />
         </div>
