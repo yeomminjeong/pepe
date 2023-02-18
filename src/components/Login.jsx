@@ -63,7 +63,7 @@ const Login = () => {
           }}
         />
       </form>
-      <Link to="/AnalysisPage">
+      <Link to="/">
         <button
           className={styles.loginBtn}
           // type="submit"
@@ -73,7 +73,7 @@ const Login = () => {
         </button>
       </Link>
 
-      <Link to={"/AnalysisPage"}>
+      <Link to={"/"}>
         <button
           className={styles.googleBtn}
           name="google"
