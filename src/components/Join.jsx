@@ -1,15 +1,40 @@
 import React, { useCallback, useState } from "react";
-import { authEmail } from "../api/auth_email";
 import styles from "./css/Join.module.css";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { authService } from "../api/firebase";
+
 const Join = () => {
+  //이메일, 비밀번호, 비밀번호 확인
   const [email, setEmail] = useState("");
   const [password, setPwd] = useState("");
-  const [isPassword, setIsPassword] = useState("");
-  const [pwdConfig, setPwdConfig] = useState(false);
-  const navigate = useNavigate();
+  const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  const onChangePwdConfirm = useCallback();
+  //function
+  const onAuthEmail = (e) => {
+    createUserWithEmailAndPassword(authService, email, password);
+  };
+
+  //유효성 검사
+  const [isPasswordConfirm, setIsPasswordConfirm] = useState(false);
+
+  //function
+  const onChangePasswordConfirm = (e) => {
+    const passwordConfirmCurrent = e.target.value;
+    setPasswordConfirm(passwordConfirmCurrent);
+    if (password === passwordConfirmCurrent) {
+      setIsPasswordConfirm(true);
+    } else {
+      setIsPasswordConfirm(false);
+    }
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  //routing
+  const navigate = useNavigate();
 
   return (
     <div className={styles.join}>
@@ -50,59 +75,70 @@ const Join = () => {
           ></input>
         </div> */}
       {/* </div> */}
-      <div className={styles.controlsId}>
-        <div className={styles.partialsTextFieldFloatin3}>
-          <input
-            className={styles.text}
-            type="text"
-            placeholder="아이디를 입력해주세요"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
+      <form onSubmit={onSubmit}>
+        <div className={styles.controlsId}>
+          <div className={styles.partialsTextFieldFloatin3}>
+            <input
+              className={styles.text}
+              type="email"
+              placeholder="아이디를 입력해주세요"
+              required
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </div>
         </div>
-      </div>
-      <div className={styles.controlsPassword}>
-        <div className={styles.partialsTextFieldFloatin3}>
-          <input
-            className={styles.text}
-            type="password"
-            placeholder="비밀번호를 입력해주세요"
-            value={password}
-            onChange={(e) => {
-              setPwd(e.target.value);
-            }}
-          />
+        <div className={styles.controlsPassword}>
+          <div className={styles.partialsTextFieldFloatin3}>
+            <input
+              className={styles.text}
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+              required
+              value={password}
+              onChange={(e) => {
+                setPwd(e.target.value);
+              }}
+            />
+          </div>
         </div>
-      </div>
-      <div className={styles.controlsPasswordcheck}>
-        <div className={styles.partialsTextFieldFloatin3}>
-          <input
-            className={styles.text}
-            type="password"
-            placeholder="비밀번호를 확인해주세요"
-            value={isPassword}
-            onChange={(e) => {
-              setIsPassword(e.target.value);
-            }}
-          />
+        <div className={styles.controlsPasswordcheck}>
+          <div className={styles.partialsTextFieldFloatin3}>
+            <input
+              className={styles.text}
+              type="password"
+              placeholder="비밀번호를 확인해주세요"
+              required
+              value={passwordConfirm}
+              onChange={onChangePasswordConfirm}
+            />
+          </div>
         </div>
+      </form>
+
+      <div className={styles.partialsTextFieldFloatin1}>
+        {isPasswordConfirm === true ? (
+          <div className={styles.text1}>비밀번호가 같습니다.</div>
+        ) : (
+          <div className={styles.text1}>비밀번호가 틀렸습니다!</div>
+        )}
       </div>
+
       {/* <div className={styles.div}>생년월일</div> */}
       {/* <div className={styles.div1}>이름</div> */}
       <div className={styles.div4}>이메일</div>
       <div className={styles.div3}>비밀번호</div>
       <div className={styles.div2}>비밀번호 확인</div>
-      <Link to="/Login">
+      <Link to="/AnalysisPage">
         <button
           className={styles.controlsJoinbuttons}
+          type="submit"
           onClick={() => {
-            setPwdConfig(() => {
-              config === password
-                ? authEmail(email, password)
-                : alert("비밀번호 확인을 해주세요.");
-            });
+            isPasswordConfirm === true
+              ? onAuthEmail()
+              : alert("비밀번호를 확인해주세요!");
           }}
         >
           <div className={styles.text7}>가입하기</div>

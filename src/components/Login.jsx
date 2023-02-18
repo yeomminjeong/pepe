@@ -1,29 +1,88 @@
 import userEvent from "@testing-library/user-event";
-import React from "react";
-import { authEmail } from "../api/auth_email";
-import { googleLogin, login } from "../api/firebase";
+import React, { useState } from "react";
 import styles from "./css/LoginEmail.module.css";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
+import {
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
+import { authService } from "../api/firebase";
+import AppRouter from "./Router";
 
-const LoginEmail = () => {
+//소셜 로그인 - google
+const onSocialClick = (e) => {
+  let provider = "";
+  if (e.target.name === "google") {
+    provider = new GoogleAuthProvider();
+  }
+  signInWithPopup(authService, provider);
+};
+
+const Login = () => {
+  //이메일, 비밀번호
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  //function
+  const onSignIn = (e) => {
+    signInWithEmailAndPassword(authService, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
+
+  //routing
   const navigate = useNavigate();
-  return (
-    <form className={styles.loginemail} id="login">
-      <input className={styles.emailText} type="text" placeholder="Email" />
-      <input
-        className={styles.pwdText}
-        type="password"
-        placeholder="password"
-      />
 
-      <button className={styles.loginBtn}>
-        <Link to="/AnalysisPage">
+  return (
+    <div className={styles.loginemail} id="login">
+      <form onSubmit={onSubmit}>
+        <input
+          className={styles.emailText}
+          type="email"
+          placeholder="Email"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+        <input
+          className={styles.pwdText}
+          type="password"
+          placeholder="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
+      </form>
+      <Link to="/AnalysisPage">
+        <button
+          className={styles.loginBtn}
+          // type="submit"
+          onClick={onSignIn}
+        >
           <div className={styles.text}>로그인</div>
-        </Link>
-      </button>
-      <button className={styles.googleBtn}>
-        <div className={styles.text3}>Google</div>
-      </button>
+        </button>
+      </Link>
+
+      <Link to={"/AnalysisPage"}>
+        <button
+          className={styles.googleBtn}
+          name="google"
+          onClick={onSocialClick}
+        >
+          <div className={styles.text3}>Google</div>
+        </button>
+      </Link>
+
       <button className={styles.kakaoBtn}>
         <div className={styles.text1}>카카오톡 로그인</div>
       </button>
@@ -54,8 +113,8 @@ const LoginEmail = () => {
           }}
         />
       </div>
-    </form>
+    </div>
   );
 };
 
-export default LoginEmail;
+export default Login;

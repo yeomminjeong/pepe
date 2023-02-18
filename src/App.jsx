@@ -1,45 +1,32 @@
 // import logo from "./logo.svg";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import {
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-  Outlet,
-  useHistory,
-} from "react-router-dom";
+import { authService } from "./api/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
-import LaunchScreen from "./components/LaunchScreen";
-import AnalysisContent from "./components/AnalysisContent";
-import Analysising from "./components/Analysising";
-import ResultPage from "./components/ResultPage";
-import AnalysisPage from "./components/AnalysisPage";
-import Join from "./components/Join";
-import LoginEmail from "./components/Login";
+import AppRouter from "./components/Router";
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<LaunchScreen />}></Route>
-        <Route path="Login" element={<LoginEmail />}></Route>
-        <Route path="AnalysisContent" element={<AnalysisContent />}></Route>
-        <Route path="Analysising" element={<Analysising />}></Route>
-        <Route path="AnalysisPage" element={<AnalysisPage />}></Route>
-        <Route path="Join" element={<Join />}></Route>
-        <Route path="ResultPage" element={<ResultPage />}></Route>
-      </Routes>
-    </div>
-    // <div>
-    //   <LaunchScreen />
-    //   <LoginEmail></LoginEmail>
-    //   <Join></Join>
-    //   <AnalysisContent />
-    //   <AnalysisPage></AnalysisPage>
-    //   <Analysising />
-    //   <ResultPage />
-    // </div>
-  );
+  //firebase 초기화
+  const [init, setInit] = useState(false);
+
+  //로그인 회원 확인
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const user = authService.currentUser;
+
+  useEffect(() => {
+    onAuthStateChanged(authService, (user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+      setInit(true);
+    });
+  }, []);
+
+  console.log(user);
+
+  return <>{init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing"}</>;
 }
 export default App;

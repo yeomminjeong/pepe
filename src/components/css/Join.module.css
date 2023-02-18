@@ -47,11 +47,21 @@
   height: 6.25rem;
   overflow: hidden;
 }
+.partialsTextFieldFloatin1 {
+  position: absolute;
+  width: calc(100% - 230px);
+  top: calc(50% - 131px);
+  right: 3.75rem;
+  left: 9.63rem;
+  height: 0.78rem;
+  font-size: 0.78rem;
+  color: #f44333;
+}
 .partialsTextFieldFloatin3 {
   position: absolute;
   width: calc(100% - 34px);
   top: calc(50% - 8.5px);
-  right: 1.13rem;
+  right: 0.5rem;
   left: 1rem;
   height: 1rem;
 }
