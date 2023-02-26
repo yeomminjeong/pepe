@@ -16,7 +16,7 @@ export default function AppRouter({ isLoggedIn }) {
       <Routes>
         {isLoggedIn ? (
           <>
-            <Route path="/AnalysisPage" element={<AnalysisPage />}></Route>
+            <Route path="/" element={<AnalysisPage />}></Route>
             <Route path="/AnalysisContent" element={<AnalysisContent />} />
             <Route path="Analysising" element={<Analysising />} />
             <Route path="AnalysisPage" element={<AnalysisPage />} />
