@@ -12,7 +12,7 @@ import AppRouter from "./Router";
 
 //소셜 로그인 - google
 const onSocialClick = (e) => {
-  let provider = "";
+  let provider = " ";
   if (e.target.name === "google") {
     provider = new GoogleAuthProvider();
   }

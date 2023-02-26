@@ -94,6 +94,7 @@
   background-color: var(--sky-white);
   height: 3rem;
   display: none;
+  color: #006400;
 }
 .barsNavBarsStandard,
 .partialsOverlay,
@@ -128,12 +129,13 @@
   font-family: var(--small-none-regular);
   color: var(--sky-white);
   text-align: center;
+  background-color: #006400;
 }
 .controlsButtons1 {
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: var(--ink-darkest);
+  background-color: #006400;
   position: absolute;
   width: calc(100% - 48px);
   right: 1.5rem;
@@ -157,7 +159,7 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: var(--ink-darkest);
+  background-color: #006400;
   position: absolute;
   width: calc(100% - 48px);
   right: 1.44rem;

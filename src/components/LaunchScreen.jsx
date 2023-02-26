@@ -6,10 +6,10 @@ const LaunchScreen = () => {
   return (
     <div className={styles.launchScreen} id="main">
       <div className="logo">
-        <img className={styles.pepe_logo} alt="" src="pepe_logo.png" />
+        <img className={styles.pepe_logo} alt="" src="mountain.png" />
       </div>
-      <b className={styles.title}>p e p e</b>
-      <div className={styles.petParents}>pet parents</div>
+      <b className={styles.title}>W I L D E T</b>
+      <div className={styles.petParents}>wildlife detect</div>
       <div className={styles.controlsButtons}>
         <Link to="/Login">
           <div className={styles.text}>시작하기</div>

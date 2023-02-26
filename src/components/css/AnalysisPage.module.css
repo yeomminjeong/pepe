@@ -36,7 +36,7 @@
 .controlsButtons {
   position: relative;
   border-radius: var(--br-lg);
-  background-color: var(--ink-darkest);
+  background-color: #006400;
   width: 170px;
   height: 48px;
   flex-shrink: 0;
@@ -66,9 +66,10 @@
 }
 .rightActionable,
 .title {
-  position: absolute;
+  position: auto;
   top: calc(50% - 9px);
   line-height: 18px;
+  color: #006400;
 }
 .title {
   left: calc(50% - 28.5px);

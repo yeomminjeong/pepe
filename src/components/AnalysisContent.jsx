@@ -13,7 +13,7 @@ const AnalysisContent = () => {
         />
       </div>
       <div className={styles.barsNavBarsStandard}>
-        <div className={styles.title}>p e p e</div>
+        <div className={styles.title}>W I L D E T</div>
         <div className={styles.rightActionable}>Action</div>
         <img
           className={styles.leftActionableIcon}
@@ -26,6 +26,7 @@ const AnalysisContent = () => {
       <button className={styles.controlsButtons1}>
         <div className={styles.text2}>앨범에서 선택</div>
       </button>
+
       <button className={styles.controlsButtons2}>
         <div className={styles.text3}> 동영상 촬영</div>
       </button>

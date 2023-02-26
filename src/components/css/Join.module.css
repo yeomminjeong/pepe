@@ -99,6 +99,7 @@
   position: absolute;
   top: calc(50% - 9px);
   line-height: 1.13rem;
+  color: #006400;
 }
 .title {
   left: calc(50% - 32.5px);
@@ -161,9 +162,11 @@
   top: 14.25rem;
   line-height: 1rem;
   font-weight: 500;
+  color: #006400;
 }
 .div3 {
   top: 11.06rem;
+  color: #006400;
 }
 .div3,
 .div4,
@@ -176,7 +179,7 @@
   width: calc(100% - 298px);
   top: 7.69rem;
   left: 1.88rem;
-  color: var(--ink-darkest);
+  color: #006400;
   display: inline-block;
   height: 1rem;
 }
@@ -192,7 +195,7 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: var(--ink-darkest);
+  background-color: #006400;
   position: absolute;
   width: calc(100% - 48px);
   right: 1.75rem;

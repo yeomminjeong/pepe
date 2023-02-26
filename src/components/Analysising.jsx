@@ -15,7 +15,7 @@ const Analysising = () => {
         </div>
       </div>
       <div className={styles.barsNavBarsStandard}>
-        <div className={styles.title}>p e p e</div>
+        <div className={styles.title}>W I L D E T</div>
         <div className={styles.rightActionable}>Action</div>
         <img className={styles.leftActionableIcon} alt="" src="leftIcon.png" />
       </div>
