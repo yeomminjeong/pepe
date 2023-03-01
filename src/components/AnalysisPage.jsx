@@ -47,7 +47,9 @@ const AnalysisPage = () => {
           <img className={styles.icons} src="analyIcon.png" />
         </div>
         <div className={styles.partialsTabBarIconOnly}>
-          <img className={styles.icons} src="profileIcon.png" />
+          <Link to="/Profile">
+            <img className={styles.icons} src="profileIcon.png" />
+          </Link>
         </div>
       </div>
     </div>

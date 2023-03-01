@@ -9,7 +9,8 @@ import Login from "./Login";
 import { Routes, Route } from "react-router-dom";
 import WebCam from "./WebCam";
 import WebcamVideo from "./WebcamVideo";
-
+import Profile from "./Profile";
+import Album from "./Album";
 export default function AppRouter({ isLoggedIn }) {
   return (
     <div className="App">
@@ -23,6 +24,8 @@ export default function AppRouter({ isLoggedIn }) {
             <Route path="ResultPage" element={<ResultPage />} />
             <Route path="WebCam" element={<WebCam />} />
             <Route path="WebcamVideo" element={<WebcamVideo />} />
+            <Route path="Profile" element={<Profile />} />
+            <Route path="Album" element={<Album />} />
           </>
         ) : (
           <>

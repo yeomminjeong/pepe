@@ -23,9 +23,11 @@ const AnalysisContent = () => {
       </div>
       <div className={styles.partialsOverlay} />
       <div className={styles.viewsBottomSheetslight} alt="" src="" />
-      <button className={styles.controlsButtons1}>
-        <div className={styles.text2}>앨범에서 선택</div>
-      </button>
+      <Link to="/Album">
+        <button className={styles.controlsButtons1}>
+          <div className={styles.text2}>앨범에서 선택</div>
+        </button>
+      </Link>
 
       <Link to="/WebCamVideo">
         <button className={styles.controlsButtons2}>
