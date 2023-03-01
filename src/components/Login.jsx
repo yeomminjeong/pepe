@@ -83,9 +83,9 @@ const Login = () => {
         </button>
       </Link>
 
-      <button className={styles.kakaoBtn}>
+      {/* <button className={styles.kakaoBtn}>
         <div className={styles.text1}>카카오톡 로그인</div>
-      </button>
+      </button> */}
 
       <div className={styles.byContinuingYouContainer}>
         <span className={styles.byContinuingYouContainer1}>

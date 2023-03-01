@@ -60,7 +60,7 @@
 
 .launchScreen {
   position: relative;
-  border-radius: var(--br-md);
+  /* border-radius: var(--br-md); */
   background-color: var(--sky-white);
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.01);
   width: 100%;

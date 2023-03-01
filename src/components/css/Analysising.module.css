@@ -43,12 +43,13 @@
 }
 .rightActionable,
 .title {
-  position: absolute;
+  position: absoluteaue;
   top: calc(50% - 9px);
   line-height: 1.13rem;
 }
 .title {
   left: calc(50% - 28.5px);
+  color: #006400;
 }
 .rightActionable {
   right: 1.5rem;
@@ -87,7 +88,7 @@
 }
 .analysising,
 .barsTabBarIconOnly {
-  background-color: var(--color-white);
+  background-color: white;
   width: 100%;
 }
 .TabBar {
@@ -104,7 +105,7 @@
 }
 .analysising {
   position: relative;
-  border-radius: var(--br-md);
+  /* border-radius: var(--br-md); */
   height: 50.75rem;
   overflow: hidden;
   text-align: center;

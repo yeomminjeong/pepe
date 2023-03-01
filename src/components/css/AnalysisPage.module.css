@@ -99,6 +99,37 @@
   background-color: var(--color-white);
   height: 48px;
 }
+
+.analysispage,
+.barsTabBarIconOnly {
+  /* background-color: var(--color-white); */
+  width: 100%;
+}
+/* .barsTabBarIcon {
+  position: absolute;
+  right: 0;
+  bottom: 34.08px;
+  left: 0;
+  box-shadow: 0-1px 1px rgba(20, 20, 20, 0.02), 0-2px 8px rgba(20, 20, 20, 0.04);
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 390px;
+}
+.partialsTabBarIconOnly {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 56px;
+  width: 130px;
+  height: 24px;
+  margin: auto;
+  text-align: center;
+} */
 .partialsTabBarIconOnly {
   align-self: stretch;
   flex: 1;
@@ -106,16 +137,15 @@
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
-  width: auto;
-  height: auto;
+  /* width: 24px;
+  height: 24px; */
   margin: auto;
 }
-.analysispage,
-.barsTabBarIconOnly {
-  background-color: var(--color-white);
-  width: 100%;
+.icons {
+  width: 24px;
+  height: 24px;
 }
-.barsTabBarIcon {
+.TabBar {
   position: absolute;
   right: 0;
   bottom: 2.13rem;
@@ -129,11 +159,12 @@
 }
 .analysispage {
   position: relative;
-  border-radius: var(--br-md);
+  /* border-radius: var(--br-md); */
   height: 812px;
   overflow: hidden;
   text-align: center;
   font-size: var(--large-normal-bold-size);
-  color: var(--ink-darkest);
+  /* color: var(--ink-darkest); */
   font-family: var(--small-none-regular);
+  background-color: white;
 }

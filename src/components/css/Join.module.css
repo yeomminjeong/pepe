@@ -214,7 +214,7 @@
 }
 .join {
   position: relative;
-  border-radius: var(--br-md);
+  /* border-radius: var(--br-md); */
   background-color: var(--sky-white);
   width: 100%;
   height: 50.75rem;

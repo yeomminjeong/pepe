@@ -19,7 +19,7 @@ const Analysising = () => {
         <div className={styles.rightActionable}>Action</div>
         <img className={styles.leftActionableIcon} alt="" src="leftIcon.png" />
       </div>
-      <div className={styles.TabBar}>
+      {/* <div className={styles.TabBar}>
         <div className={styles.partialsTabBarIconOnly}>
           <img src="homeIcon.png" />
         </div>
@@ -29,7 +29,7 @@ const Analysising = () => {
         <div className={styles.partialsTabBarIconOnly}>
           <img src="profileIcon.png" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

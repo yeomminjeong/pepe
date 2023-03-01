@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import styles from "./css/AnalysisContent.module.css";
 
 const AnalysisContent = () => {
@@ -27,9 +27,11 @@ const AnalysisContent = () => {
         <div className={styles.text2}>앨범에서 선택</div>
       </button>
 
-      <button className={styles.controlsButtons2}>
-        <div className={styles.text3}> 동영상 촬영</div>
-      </button>
+      <Link to="/WebCamVideo">
+        <button className={styles.controlsButtons2}>
+          <div className={styles.text3}> 동영상 촬영</div>
+        </button>
+      </Link>
     </div>
   );
 };
