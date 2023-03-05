@@ -19,7 +19,7 @@ export default function AppRouter({ isLoggedIn }) {
           <>
             <Route path="/" element={<AnalysisPage />}></Route>
             <Route path="/AnalysisContent" element={<AnalysisContent />} />
-            <Route path="Analysising" element={<Analysising />} />
+            {/* <Route path="Analysising" element={<Analysising />} /> */}
             <Route path="AnalysisPage" element={<AnalysisPage />} />
             <Route path="ResultPage" element={<ResultPage />} />
             <Route path="WebCam" element={<WebCam />} />

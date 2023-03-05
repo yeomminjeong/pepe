@@ -1,55 +1,65 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useState, useRef } from "react";
 import Webcam from "react-webcam";
-import "./css/WebCam.css";
+import axios from "axios";
+import Analysising from "./Analysising";
 
 export default function WebcamVideo() {
   const webcamRef = useRef(null);
   const mediaRecorderRef = useRef(null);
-  const [capturing, setCapturing] = useState(false);
-  const [recordedChunks, setRecordedChunks] = useState([]);
+  const [recording, setRecording] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleDataAvailable = useCallback(
-    ({ data }) => {
-      if (data.size > 0) {
-        setRecordedChunks((prev) => prev.concat(data));
-      }
-    },
-    [setRecordedChunks]
-  );
-
-  const handleStartCaptureClick = useCallback(() => {
-    setCapturing(true);
-    mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-      mimeType: "video/webm",
-    });
+  const handleStartRecording = () => {
+    setRecording(true);
+    mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream);
     mediaRecorderRef.current.addEventListener(
       "dataavailable",
       handleDataAvailable
     );
     mediaRecorderRef.current.start();
-  }, [webcamRef, setCapturing, mediaRecorderRef, handleDataAvailable]);
+  };
 
-  const handleStopCaptureClick = useCallback(() => {
-    mediaRecorderRef.current.stop();
-    setCapturing(false);
-  }, [mediaRecorderRef, setCapturing]);
+  const handleDataAvailable = (event) => {
+    if (event.data.size > 0) {
+      const videoBlob = new Blob([event.data], { type: "video/mp4" });
+      const formData = new FormData();
+      formData.append("file", videoBlob);
+      setIsLoading(true);
+      axios
+        .post("http://localhost:5000/detect", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          withCredentials: true,
+          responseType: "blob", // blob 유형으로 응답 받음
+        })
+        .then((response) => {
+          console.log("성공");
 
-  const handleDownload = useCallback(() => {
-    if (recordedChunks.length) {
-      const blob = new Blob(recordedChunks, {
-        type: "video/webm",
-      });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      document.body.appendChild(a);
-      a.style = "display: none";
-      a.href = url;
-      a.download = "react-webcam-stream-capture.webm";
-      a.click();
-      window.URL.revokeObjectURL(url);
-      setRecordedChunks([]);
+          const videoBlob = new Blob([response.data], {
+            type: "video/mp4",
+          });
+
+          setIsLoading(false);
+
+          const videoUrl1 = URL.createObjectURL(videoBlob); // URL 객체로 변환
+          setVideoUrl(videoUrl1);
+
+          // const a = document.createElement("a");
+          // a.href = videoUrl1;
+          // const videoName = `video_${new Date().getTime()}.mp4`;
+          // a.download = videoName;
+          // a.click();
+        });
     }
-  }, [recordedChunks]);
+  };
+
+  console.log(videoUrl);
+
+  const handleStopRecording = () => {
+    mediaRecorderRef.current.stop();
+  };
 
   const videoConstraints = {
     width: 420,
@@ -57,23 +67,50 @@ export default function WebcamVideo() {
     facingMode: "user",
   };
 
+  // const handleVideoLoaded = (event) => {
+  //   event.target.play();
+  // };
+
   return (
     <div className="Container">
-      <Webcam
-        height={400}
-        width={400}
-        audio={false}
-        mirrored={true}
-        ref={webcamRef}
-        videoConstraints={videoConstraints}
-      />
-      {capturing ? (
-        <button onClick={handleStopCaptureClick}>Stop Capture</button>
+      {isLoading ? (
+        <div
+          style={{
+            color: "white",
+          }}
+        >
+          객체 인식 중
+        </div>
       ) : (
-        <button onClick={handleStartCaptureClick}>Start Capture</button>
-      )}
-      {recordedChunks.length > 0 && (
-        <button onClick={handleDownload}>Download</button>
+        <>
+          {videoUrl ? (
+            <button
+              onClick={() => {
+                const a = document.createElement("a");
+                a.href = videoUrl;
+                const videoName = `video_${new Date().getTime()}.mp4`;
+                a.download = videoName;
+                a.click();
+              }}
+            >
+              다운로드
+            </button>
+          ) : (
+            <Webcam
+              height={400}
+              width={400}
+              audio={false}
+              mirrored={true}
+              ref={webcamRef}
+              videoConstraints={videoConstraints}
+            />
+          )}
+          {recording ? (
+            <button onClick={handleStopRecording}>Stop Recording</button>
+          ) : (
+            <button onClick={handleStartRecording}>Start Recording</button>
+          )}
+        </>
       )}
     </div>
   );
